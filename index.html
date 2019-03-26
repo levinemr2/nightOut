@@ -10,21 +10,20 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Night Out</title>
   </head>
   <body>
-    <jumbotron class="fluid">
+   <div class="jumbotron jumbotron-fluid">
       <h1>Night Out!</h1>
-      <h2>
-        Plan a date night with your significant other, or a fun night out with
-        friends.
-      </h2>
-    </jumbotron>
+      
+    </div>
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-12">
+        <div class="col-12 col-md-4"></div>
+          <div class="col-md-4">
           <br />
           <br />
           <form class="form-inline">
@@ -39,15 +38,15 @@
               />
             </div>
             <div class="form-group mx-sm-3 mb-2">
-              <label for="artist" class="sr-only">Artist</label>
+              <label for="artist" class="sr-only">Zip Code</label>
               <input
-                type="number"
+                type="text"
                 class="form-control"
                 id="ZipCodeInput"
                 placeholder="23224"
               />
             </div>
-            <button type="submit" class="btn btn-primary mb-2" id="zipCodeButton">
+            <button type="submit" id="zipCodeBtn" class="btn btn-primary mb-2" id="zipCodeButton">
               Search
             </button>
           </form>
@@ -70,8 +69,9 @@
                 id="artistInput"
                 placeholder="Billy Joel"
               />
+              <div id="artistDump"></div>
             </div>
-            <button type="submit" class="btn btn-primary mb-2" id="artistButton">
+            <button type="submit" id="artistBtn" class="btn btn-primary mb-2" id="artistButton">
               Search
             </button>
           </form>
@@ -86,7 +86,7 @@
                 value="Restaurant"
               />
             </div>
-            <div class="form-group mx-sm-3 mb-2">
+            <div id="restaurantDiv" class="form-group mx-sm-3 mb-2">
               <label for="restaurantSearch" class="sr-only">Restaurant</label>
               <input
                 type="text"
@@ -95,7 +95,7 @@
                 placeholder="Panera Bread"
               />
             </div>
-            <button type="submit" class="btn btn-primary mb-2" id="restaurantButton">
+            <button type="submit" id="restaurantBtn" class="btn btn-primary mb-2" id="restaurantButton">
               Search
             </button>
           </form>
@@ -103,17 +103,18 @@
       </div>
     </div>
     
-    <hr />
-        <div class="text-center center-block">
-            <p class="txt-railway">- Bootsnipp.com -</p>
-            <br />
-                <a href="https://www.facebook.com/bootsnipp"><i class="fab fa-facebook"></i></a>
-	            <a href="https://twitter.com/bootsnipp"><i class="fab fa-twitter-square"></i></a>
-	            <a href="https://plus.google.com/+Bootsnipp-page"><i class="fab fa-instagram"></i></a>
-	            <a href="mailto:bootsnipp@gmail.com"><i class="fas fa-envelope-square"></i></a>
+   
+        <div id="footer" class="text-center center-block">
+           <hr>
+            <p class=" footerText txt-railway">- nightout.com -</p>
+                <a href="https://www.facebook.com/bootsnipp"><i class="icon fab fa-facebook fa-2x"></i></a>
+	            <a href="https://twitter.com/bootsnipp"><i class="icon fab fa-twitter-square fa-2x"></i></a>
+	            <a href="https://plus.google.com/+Bootsnipp-page"><i class="icon fab fa-instagram fa-2x"></i></a>
+
+              <a href="mailto:bootsnipp@gmail.com"><i class="icon fas fa-envelope-square fa-2x"></i></a>
+              
 </div>
-    <hr />
-</div>
-       
-  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+              <script src="app.js"></script>
+</body>
 </html>

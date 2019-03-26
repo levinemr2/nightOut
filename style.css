@@ -1,3 +1,61 @@
-body{
-    background-color: red;
+.jumbotron{
+    background-image: url("images/jumbotronBackground.jpeg");
+    background-size: cover;
+    height: 350px;
+    color:#F0F0DF;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+   
 }
+
+h1{
+    font-size: 200px;
+    font-family: 'Merienda', cursive;
+    margin: 20px;
+}
+
+body{
+    background-color:#F0F0DF;
+    text-align: center;
+}
+
+#footer {
+    background-color: #3F5866;
+    color: #FF9000;
+}
+
+.icon{
+    color:#F0F0DF;
+    margin: 5px;
+    margin-bottom: 30px;
+    color: #FF9000
+}
+
+.btn{
+    background-color: #3F5866;
+    border: lightslategray;
+    
+}
+
+.btn:hover{
+background-color: rgb(160, 160, 160);
+box-shadow: 3px 3px 0 0 gray;
+
+}
+
+#artistBtn:active{
+    background-color: #3F5866;
+    box-shadow: 0 5px 0 0 #2B3A42;
+}
+
+#zipCodeBtn:active{
+    background-color:#3F5866;
+    box-shadow: 0 5px 0 0 #2B3A42;
+}
+
+#restaurantBtn:active{
+    background-color:#3F5866;
+    box-shadow: 0 5px 0 0 #2B3A42;
+}
+
