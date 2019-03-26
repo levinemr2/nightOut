@@ -28,27 +28,28 @@
           <br />
           <form class="form-inline">
             <div class="form-group mb-2">
-              <label for="zipcode" class="sr-only">Zip Code</label>
+              <label for="City" class="sr-only">City</label>
               <input
                 type="text"
                 readonly
                 class="form-control-plaintext"
-                id="zipCode"
-                value="Zip Code"
+                id="city"
+                value="City"
               />
             </div>
             <div class="form-group mx-sm-3 mb-2">
-              <label for="artist" class="sr-only">Zip Code</label>
+              <label for="City" class="sr-only">City</label>
               <input
                 type="text"
                 class="form-control"
-                id="ZipCodeInput"
-                placeholder="23224"
+                id="cityInput"
+                placeholder="Richmond"
               />
             </div>
-            <button type="submit" id="zipCodeBtn" class="btn btn-primary mb-2" id="zipCodeButton">
+            <button type="submit" id="cityBtn" class="btn btn-primary mb-2" id="cityButton">
               Search
             </button>
+            <div id="cityDump"></div>
           </form>
           <form class="form-inline">
             <div class="form-group mb-2">
@@ -69,11 +70,11 @@
                 id="artistInput"
                 placeholder="Billy Joel"
               />
-              <div id="artistDump"></div>
             </div>
             <button type="submit" id="artistBtn" class="btn btn-primary mb-2" id="artistButton">
               Search
             </button>
+            <div id="artistDump"></div>
           </form>
           <form class="form-inline">
             <div class="form-group mb-2">
