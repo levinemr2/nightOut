@@ -1,3 +1,5 @@
+
+
 $("#cityBtn").on("click", function() {
   event.preventDefault();
   var show = $(this).attr("data-show");
@@ -15,7 +17,8 @@ $("#cityBtn").on("click", function() {
       var eventDiv = $("<div>");
       var event = results[i].name;
       var date = results[i].dates.start.localDate;
-      var p = $("<p>").html(event + "<br>" + date);
+      var venue = results[i]._embedded.venues[0].name;
+      var p = $("<p>").html(event + "<br>" + date + "<br>" + venue);
       
 
       eventDiv.prepend(p);
@@ -40,7 +43,9 @@ $("#artistBtn").on("click", function() {
             var artistDiv = $("<div>");
             var event = results[i].name;
             var date = results[i].dates.start.localDate;
-            var p = $("<p>").html(event + "<br>" + date);
+            var venue = results[i]._embedded.venues[0].name;
+            var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<hr>");
+
             
       
             artistDiv.prepend(p);
@@ -48,3 +53,4 @@ $("#artistBtn").on("click", function() {
           }
     });
 });
+

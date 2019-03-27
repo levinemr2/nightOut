@@ -1,114 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Merienda"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Night Out</title>
-  </head>
-  <body>
-    <div class="jumbotron jumbotron-fluid">
-      <h1>Night Out!</h1>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4"></div>
-        <div class="col-md-4">
-          <br />
-          <br />
-          <form class="form-inline">
-            <div class="form-group mb-2">
-              <label for="City" class="sr-only">City</label>
-              <input
-                type="text"
-                readonly
-                class="form-control-plaintext"
-                id="city"
-                value="City"
-              />
-            </div>
-            <div class="form-group mx-sm-3 mb-2">
-              <label for="City" class="sr-only">City</label>
-              <input
-                type="text"
-                class="form-control"
-                id="cityInput"
-                placeholder="Richmond"
-              />
-            </div>
-            <button
-              type="submit"
-              id="cityBtn"
-              class="btn btn-primary mb-2"
-              id="cityButton"
-            >
-              Search
-            </button>
-            <div id="cityDump"></div>
-          </form>
-          <form class="form-inline">
-            <div class="form-group mb-2">
-              <label for="artistSearch" class="sr-only">Artist</label>
-              <input
-                type="text"
-                readonly
-                class="form-control-plaintext"
-                id="artist"
-                value="Artist"
-              />
-            </div>
-            <div class="form-group mx-sm-3 mb-2">
-              <label for="artistSearch" class="sr-only">Artist</label>
-              <input
-                type="text"
-                class="form-control"
-                id="artistInput"
-                placeholder="Billy Joel"
-              />
-            </div>
-            <button
-              type="submit"
-              id="artistBtn"
-              class="btn btn-primary mb-2"
-              id="artistButton"
-            >
-              Search
-            </button>
-            <div id="artistDump"></div>
-          </form>
-            
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-<div>
-    <h3>Get Directions!</h3>
-    <P>Type in your address and the venue to get directions and explore nearby food and drinks!</P>
-</div>
+    <title>Place Autocomplete and Directions</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
         height: 425px;
-        margin: 0 75px;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -158,7 +58,8 @@
       }
 
     </style>
-  
+  </head>
+  <body>
     <div style="display: none">
         <input id="origin-input" class="controls" type="text"
             placeholder="Enter an origin location">
@@ -291,26 +192,5 @@ AutocompleteDirectionsHandler.prototype.route = function() {
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2MA4N6wyWuU5pYQeCrZHoGUA7d1iI20s&libraries=places&callback=initMap"
         async defer></script>
-    <div id="footer" class="text-center center-block">
-      <hr />
-      <p class=" footerText txt-railway">- nightout.com -</p>
-      <a href="https://www.facebook.com/bootsnipp"
-        ><i class="icon fab fa-facebook fa-2x"></i
-      ></a>
-      <a href="https://twitter.com/bootsnipp"
-        ><i class="icon fab fa-twitter-square fa-2x"></i
-      ></a>
-      <a href="https://plus.google.com/+Bootsnipp-page"
-        ><i class="icon fab fa-instagram fa-2x"></i
-      ></a>
-
-      <a href="mailto:bootsnipp@gmail.com"
-        ><i class="icon fas fa-envelope-square fa-2x"></i
-      ></a>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-    
-    
   </body>
 </html>
