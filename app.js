@@ -1,4 +1,13 @@
-
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAFQrS1odM50v6za6XqnUmUeKtxuUTAZGA",
+  authDomain: "test-6aef2.firebaseapp.com",
+  databaseURL: "https://test-6aef2.firebaseio.com",
+  projectId: "test-6aef2",
+  storageBucket: "test-6aef2.appspot.com",
+  messagingSenderId: "637556399547"
+};
+firebase.initializeApp(config);
 
 $("#cityBtn").on("click", function() {
   event.preventDefault();
