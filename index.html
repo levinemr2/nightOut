@@ -29,6 +29,10 @@
     </div>
     <div class="container">
       <div class="row">
+        <div class="col-md-3">
+          <h3>You are searching in the city of</h3>
+          <h2 id= location></h2>
+        </div>
         <div class="col-12 col-md-4"></div>
         <div class="col-md-4">
           <br />
@@ -125,12 +129,12 @@
 
     <div id="map"></div>
 
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script>
+      
+
     
-<script
- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2MA4N6wyWuU5pYQeCrZHoGUA7d1iI20s&libraries=places">
-</script>
-  <script>
-function initMap() {
+    function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     mapTypeControl: false,
     center: {lat: -33.8688, lng: 151.2195},
@@ -177,6 +181,7 @@ function AutocompleteDirectionsHandler(map) {
       destinationInput);
   this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
 }
+
 
 // Sets a listener on a radio button to change the filter type on Places
 // Autocomplete.
@@ -232,10 +237,12 @@ AutocompleteDirectionsHandler.prototype.route = function() {
         }
       });
 };
-
+    
+    
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2MA4N6wyWuU5pYQeCrZHoGUA7d1iI20s&libraries=places&callback=initMap"
-        async defer></script>
+
+
+
     <div id="footer" class="text-center center-block">
       <hr />
       <p class=" footerText txt-railway">- nightout.com -</p>
@@ -252,9 +259,14 @@ AutocompleteDirectionsHandler.prototype.route = function() {
       <a href="mailto:bootsnipp@gmail.com"
         ><i class="icon fas fa-envelope-square fa-2x"></i
       ></a>
+
+      
     </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2MA4N6wyWuU5pYQeCrZHoGUA7d1iI20s&libraries=places&callback=initMap"
+        async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
     <script src="app.js"></script>
     
     

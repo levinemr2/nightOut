@@ -1,4 +1,3 @@
-// Initialize Firebase
 var config = {
   apiKey: "AIzaSyAFQrS1odM50v6za6XqnUmUeKtxuUTAZGA",
   authDomain: "test-6aef2.firebaseapp.com",
@@ -9,12 +8,33 @@ var config = {
 };
 firebase.initializeApp(config);
 
+var database = firebase.database();
+
+var place = "";
+
 $("#cityBtn").on("click", function() {
   event.preventDefault();
+
+  place = $("#cityInput").val().trim();
+
+  database.ref().set({
+    place: place,
+  });
+
+  database.ref().on("value", function(snapshot) {
+    console.log(snapshot.val().place);
+    if (typeof place !== 'string' || place instanceof Number) {
+    $("#location").text("please enter a valid city")
+  } else { $("#location").text(snapshot.val().place) }
+
+  
+  })
+
+
   var show = $(this).attr("data-show");
   var queryURL =
     "https://app.ticketmaster.com/discovery/v2/events.json?size=10&apikey=sXaOY3gZG8DXBK0h5AAJIFPCfflg5Cg2&city=" +
-    $("#cityInput").val();
+    place;
 
   $.ajax({
     url: queryURL,
@@ -27,7 +47,7 @@ $("#cityBtn").on("click", function() {
       var event = results[i].name;
       var date = results[i].dates.start.localDate;
       var venue = results[i]._embedded.venues[0].name;
-      var p = $("<p>").html(event + "<br>" + date + "<br>" + venue);
+      var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<hr>");
       
 
       eventDiv.prepend(p);
@@ -35,7 +55,6 @@ $("#cityBtn").on("click", function() {
     }
   });
 });
-
 
 $("#artistBtn").on("click", function() {
     event.preventDefault();
@@ -62,4 +81,5 @@ $("#artistBtn").on("click", function() {
           }
     });
 });
+
 
