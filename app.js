@@ -47,7 +47,7 @@ $("#cityBtn").on("click", function() {
       var event = results[i].name;
       var date = results[i].dates.start.localDate;
       var venue = results[i]._embedded.venues[0].name;
-      var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<hr>");
+      var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<button data-micron='bounce' id=ticketmaster-btn>Buy Tickets</button> " + "<hr>");
       
 
       eventDiv.prepend(p);
@@ -55,6 +55,9 @@ $("#cityBtn").on("click", function() {
     }
   });
 });
+
+
+
 
 $("#artistBtn").on("click", function() {
     event.preventDefault();
@@ -72,7 +75,7 @@ $("#artistBtn").on("click", function() {
             var event = results[i].name;
             var date = results[i].dates.start.localDate;
             var venue = results[i]._embedded.venues[0].name;
-            var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<hr>");
+            var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<button id=ticketmaster-btn>Buy Tickets</button> " + "<hr>");
 
             
       
@@ -83,3 +86,7 @@ $("#artistBtn").on("click", function() {
 });
 
 
+$(document).on("click", "#ticketmaster-btn", function(event) {
+  event.preventDefault();
+  window.location.href = "https://www.ticketmaster.com/";
+});

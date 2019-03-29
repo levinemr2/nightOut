@@ -34,9 +34,16 @@ body{
 
 .btn{
     background-color: #3F5866;
-    border: lightslategray;
+    width: 20%;
+  padding: 10px;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; 
+  cursor: pointer;
     
 }
+
 
 .btn:hover{
 background-color: rgb(160, 160, 160);
@@ -47,16 +54,31 @@ box-shadow: 3px 3px 0 0 gray;
 #artistBtn:active{
     background-color: #3F5866;
     box-shadow: 0 5px 0 0 #2B3A42;
+
 }
 
 #zipCodeBtn:active{
     background-color:#3F5866;
     box-shadow: 0 5px 0 0 #2B3A42;
+    color: white;
 }
 
 #restaurantBtn:active{
     background-color:#3F5866;
     box-shadow: 0 5px 0 0 #2B3A42;
+}
+
+#ticketmaster-btn{
+    background-color: #3F5866;
+    width: 20%;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; 
+  cursor: pointer;
+  margin: 3px;
+    
+
 }
 
 #map {
