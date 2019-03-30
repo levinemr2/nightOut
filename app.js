@@ -53,7 +53,7 @@ $("#cityBtn").on("click", function() {
       var venue = results[i]._embedded.venues[0].name;
 
       //adding results to page
-      var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<br>"+"<button data-micron='bounce' id=ticketmaster-btn>Buy Tickets</button> " +"<br>" + "<hr>");
+      var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<br>" + "<button data-micron='bounce' id=ticketmaster-btn>Buy Tickets</button> " +"<br>" + "<hr>");
       
 
       eventDiv.prepend(p);
@@ -78,8 +78,13 @@ $("#artistBtn").on("click", function() {
   database.ref().set({
     talent: talent,
   });
+  
+  database.ref().on("value", function(snapshot) {
+    console.log(snapshot.val().place);
+    { $("#artist").text(snapshot.val().talent) }
 
-
+  
+  })
   //calling the JSON
     
     $.ajax({
@@ -105,6 +110,7 @@ $("#artistBtn").on("click", function() {
             artistDiv.prepend(p);
             $("#artistDump").prepend(artistDiv);
           }
+          
     });
 });
 
