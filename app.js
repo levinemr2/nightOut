@@ -53,7 +53,7 @@ $("#cityBtn").on("click", function() {
       var venue = results[i]._embedded.venues[0].name;
 
       //adding results to page
-      var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<br>"+"<button data-micron='bounce' id=ticketmaster-btn>Buy Tickets</button> " + "<hr>");
+      var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<br>"+"<button data-micron='bounce' id=ticketmaster-btn>Buy Tickets</button> " +"<br>" + "<hr>");
       
 
       eventDiv.prepend(p);
@@ -98,7 +98,7 @@ $("#artistBtn").on("click", function() {
             var venue = results[i]._embedded.venues[0].name;
 
             
-            var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<button id=ticketmaster-btn>Buy Tickets</button> " + "<hr>");
+            var p = $("<p>").html(event + "<br>" + date + "<br>" + venue + "<br>" + "<button id=ticketmaster-btn>Buy Tickets</button> " + "<hr>");
 
             
       
